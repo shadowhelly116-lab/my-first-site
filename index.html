@@ -1,1 +1,381 @@
+!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deni | Premium Web Developer & UI Designer</title>
+
+    <!-- Professional Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS STYLES (Ultra-Modern Premium Theme) -->
+    <style>
+        :root {
+            --bg-main: #0b0f19;
+            --bg-card: #131a2c;
+            --accent: #2563eb;
+            --accent-glow: #3b82f6;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border: #1e293b;
+        }
+     /* Reset & Global */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-main);color: var(--text-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Professional Glassmorphism Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: rgba(11, 15, 25, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--text-main);
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            margin-left: 30px;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--text-main);
+        }
+
+        .btn-nav {
+            background: linear-gradient(135deg, var(--accent), var(--accent-glow));
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-nav:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+        }
+
+        /* Hero / Introduction Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            position: relative;
+            background: radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.15) 0%, transparent 50%);
+            padding-top: 100px;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .tagline {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.1)padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            border: 1px solid rgba(37, 99, 235, 0.2);
+        }
+
+        .hero-content h1 {
+            font-size: 56px;
+            font-weight: 700;
+            letter-spacing: -1.5px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 span {
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;.hero-content p {
+            font-size: 19px;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+            max-width: 600px;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent), var(--accent-glow));
+            color: white;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+            transition: all 0.3s ease;
+          
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent), var(--accent-glow));
+            color: white;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
+        }
+
+        /* Services & Enterprise Solutions Section */
+        .services {
+            padding: 120px 10%;
+            background: var(--bg-main);
+        }
+
+        .section-header {
+            text-align: center;.section-header p {
+            color: var(--text-muted);
+            font-size: 16px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+          
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 40px;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(37, 99, 235, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-icon {
+            font-size: 32px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+          }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        /* Premium Contact Block */
+        .contact {
+            padding: 120px 10%;
+            background: radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.1) 0%, transparent 50%);
+            text-align: center;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, var(--bg-card), #16223f);
+            border: 1px solid var(--border);
+            padding: 60px 40px;
+            border-radius: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-box h2 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+          
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+       }
+
+        .cont act-box p {
+            color: var(--text-muted);
+            font-size: 18px;
+            margin-bottom: 35px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 10%;
+            border-top: 1px solid var(--border);
+            background: var(--bg-main);
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            header {
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+        }
+          
+        }
+      ;
+            color: var(--accent-glow);        @media (max-width: 768px) {
+            header {
+                padding: 15px 5%;
+            }
+
+            nav {
+                display: none;
+            }
+
+            /* Kept basic for single-file deployment */
+            .hero {
+                padding: 0 5%;
+                padding-top: 120px;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .hero-content p {
+                margin: 0 auto 30px auto;
+            }
+
+            .services {
+                padding: 80px 5%;
+            }
+
+            .contact {
+                padding: 80px 5%;
+            }
+
+            .contact-box {
+                padding: 40px 20px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER / NAVIGATION NAVIGATION -->
+    <header>
+        <div class="logo">Deni<span>.dev</span></div>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#services">Services</a>
+            <a href="#contact" class="btn-nav">Let's Talk</a>
+        </nav>
+      </header>
+
+    <!-- HERO INTRODUCTION SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="tagline">Available for Freelance & Contract Operations</span>
+            <h1>Turning Complex Ideas into High-End <span>Websites</span></h1>
+            <p>Hey, I'm Deni. As a professional web developer, I engineer robust systems, clean interactive frontends,
+                and tailored web business solutions.</p>
+            <a href="#contact" class="btn-cta">Start Launching Your Site</a>
+        </div>
+    </section>
+
+    <!-- SERVICES & EXPERTISE SECTION -->
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2>Core Capabilities</h2>
+            <p>Production-ready engineering designed to scale your operations and grow your metrics.</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="card">
+                <div class="card-icon">💻</div>
+                <h3>Enterprise Web Development<<p>Clean structural HTML5, CSS3 architecture, and native programming tailored cleanly to modern industry
+                    specifications.</p>
+            </div>
+            <!-- Service 2 -->
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Performance Architecture</h3>
+                <p>Lightning-fast execution parameters optimized comprehensively for extreme retention scores and rapid
+                    device initialization.</p>
+            </div>
+            <!-- Service 3 -->/h3>
+              
+          
+          
