@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Denise | Personal Portfolio</title>
+
+  <meta name="description" content="Welcome to Denise's personal portfolio. Discover my work, skills, interests, and ways to get in touch.">
+
+  <style>
+    /* =========================
+       RESET & GENERAL STYLES
+    ========================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --primary: #8b5cf6;
+      --secondary: #ec4899;
+      --dark: #171321;
+      --text: #393445;
+      --light: #faf8ff;
+      --white: #ffffff;
+      --muted: #777185;
+--gradient: linear-gradient(135deg, #8b5cf6, #ec4899);
+      --shadow: 0 15px 40px rgba(70, 40, 100, 0.12);
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--light);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    section {
+      padding: 100px 8%;
+    }
+.container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      transition: 0.3s;cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 130px;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(139,92,246,.16), transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(236,72,153,.14), transparent 30%),
+        var(--light);
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      width: 100%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 70px;
+      align-items: center;
+    }}
+
+    .tag {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 30px;
+      background: #eee7ff;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      line-height: 1.05;
+      margin-bottom: 25px;
+      color: var(--dark);
+    }
+
+    .hero h1 span {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 650px;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 25px;
+      border-radius: 50px;
+      font-weight: 700;
+      transition: .3s;
+      display: inline-block;
+    }
+color: white;
+      background: var(--gradient);
+      box-shadow: 0 10px 25px rgba(139,92,246,.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(139,92,246,.35);
+    }
+
+    .btn-outline {
+      border: 2px solid #ddd3f7;
+      color: var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: #f1ebff;
+    }
+
+    .btn-primary {/* HERO IMAGE */
+
+    .hero-image {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image img {
+      width: 380px;
+      height: 480px;
+      object-fit: cover;
+      border-radius: 190px 190px 30px 30px;
+      box-shadow: 0 30px 70px rgba(70,40,100,.2);
+      border: 8px solid white;
+    }
+
+    .floating-card {
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      backgroun/* =========================
+       SECTION TITLES
+    ========================== */
+
+    .section-title {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 60px;
+    }
+
+    .section-title span {
+      color: var(--primary);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: .85rem;
+    }
+
+    .section-title h2 {
+      font-size: 2.7rem;
+      margin: 10px 0;
+      color: var(--dark);
+    }
+d: white;
+.section-title p {
+      color: var(--muted);
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-image img {
+      height: 500px;width: 100%;
+      object-fit: cover;
+      border-radius: 25px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-text h3 {
+      font-size: 2rem;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 25px;
+    }
+border-radius: 15px;
+      background: #faf8ff;
+      border: 1px solid #eee8fa;
+    }
+
+    .fact strong {
+      display: block;
+      color: var(--primary);
+    }
+
+    /* =========================
+       SKILLS
+    ========================== */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .skill-card {
+      padding: 35px;
+      background: white;
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      transition: .3s;
+}
+
+    .skill-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .skill-icon {
+      width: 55px;
+      height: 55px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: #eee7ff;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .skill-card h3 {
+      margin-bottom: 10px;
+      color: var(--dark);
+    }
+
+    .skill-card p {
+      color: var(--muted);
+    }
+      transform: translateY(-8px);
+  transform: translateY(-8px);
+    }
+
+    .project-card img {
+      height: 230px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .project-info {
+      padding: 25px;
+    }
+
+    .project-info h3 {
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .project-info p {
+      color: var(--muted);
+    }
+
+    /* =========================
+       CONTACT ME
+    ========================== */
+
+    .fact {
+      padding: 18px;❤👀
+
+
+
+      padding: 18px 22px;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      font-weight: 700;
+    }
+
+
+
+
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .menu-btn {
+      display: none;
+      border: none;
+      background: none;
+      font-size: 1.8rem;background:
+        linear-gradient(135deg, rgba(139,92,246,.95), rgba(236,72,153,.92)),
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .contact-container {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      opacity: .9;
+      margin-bottom: 35px;
+}
+
+    .socials a {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,.1);
+      transition: .3s;
+    }
+
+    .socials a:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .hero-content,
+      .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-image {
+        order: -1;
+      }
+
+      .hero-image img {
+        width: 300px;
+        height: 390px;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .skills-grid,
+      .project-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-image {
+        max-width: 500px;
+        margin: auto;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      section {
+        padding: 75px 6%;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px;
+        display: none;
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .skills-grid,
+      .project-grid,
+      .facts {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .contact h2 {
+        font-size: 2.3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <header>
+    <nav>
+      <a href="#home" class="logo">Denise.</a>
+
+      <button class="menu-btn" id="menuBtn">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <div>
+
+        <span class="tag">Welcome to my portfolio ✨</span>
+
+        <h1>
+          Hello, I'm <span>Denise.</span>
+        </h1>
+
+        <p>
+          I’m a creative and motivated person who enjoys learning,
+          exploring new ideas, and turning inspiration into meaningful
+          projects. Welcome to my personal space on the web.
+        </p>
+
+        <div class="buttons">
+          <a href="#about" class="btn btn-primary">
+            Discover More
+          </a>
+
+          <a href="#contact" class="btn btn-outline">
+            Contact Me
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="hero-image">
+
+        <!-- Replace this image with your own photo -->
+        <img
+          src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=85"
+          alt="Denise">
+
+        <div class="floating-card">
+          ✨ Creative • Curious • Passionate
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ABOUT
+  ========================== -->
+
+  <section class="about" id="about">
+
+    <div class="container">
+
+      <div class="section-title">
+        <span>About Me</span>
+        <h2>A little bit about who I am</h2>
+        <p>
+          Get to know me, my interests, and what motivates me.
+        </p>
+      </div>
+
+
+      <div class="about-grid">
+
+        <div class="about-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=85"
+            alt="About Denise">
+
+        </div>
+
+
+        <div class="about-text">
+
+          <h3>Nice to meet you!</h3>
+
+          <p>
+            My name is Denise, and this website is a little introduction
+            to who I am. I believe that every experience is an opportunity
+            to learn something new and every idea has the potential to
+            become something meaningful.
+          </p>
+
+          <p>
+            I enjoy creativity, learning new skills, meeting interesting
+            people, and working on projects that allow me to grow.
+            This portfolio is a place where I can share my journey,
+            interests, and work with others.
+          </p>
+
+          <div class="facts">
+
+            <div class="fact">
+              <strong>Based in</strong>
+              Your City
+            </div>
+
+            <div class="fact">
+              <strong>Interests</strong>
+              Creativity & Technology
+            </div>
+
+            <div class="fact">
+              <strong>Focus</strong>
+              Learning & Growth
+            </div>
+
+            <div class="fact">
+              <strong>Available for</strong>
+              New Opportunities
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SKILLS
+  ========================== -->
+
+  <section id="skills">
+
+    <div class="container">
+
+      <div class="section-title">
+        <span>What I Do</span>
+        <h2>My Skills & Interests</h2>
+        <p>
+          A few areas that I enjoy learning and working in.
+        </p>
+      </div>
+
+
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-icon">💻</div>
+          <h3>Web Design</h3>
+          <p>
+            Creating modern, responsive, and user-friendly websites.
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🎨</div>
+          <h3>Creativity</h3>
+          <p>
+            Exploring visual ideas, design, and creative projects.
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">📚</div>
+          <h3>Learning</h3>
+          <p>
+            Constantly developing new skills and discovering new ideas.
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🌎</div>
+          <h3>Communication</h3>
+          <p>
+            Connecting with people and sharing ideas clearly.
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">💡</div>
+          <h3>Problem Solving</h3>
+          <p>
+            Finding creative approaches to challenges and projects.
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🚀</div>
+          <h3>Growth</h3>
+          <p>
+            Always looking for opportunities to improve and grow.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROJECTS
+  ========================== -->
+
+  <section class="projects" id="projects">
+
+    <div class="container">
+
+      <div class="section-title">
+        <span>My Work</span>
+        <h2>Featured Projects</h2>
+        <p>
+          Here are some examples of projects and ideas I have worked on.
+        </p>
+      </div>
+
+
+      <div class="project-grid">
+
+        <div class="project-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80"
+            alt="Creative project">
+
+          <div class="project-info">
+            <h3>Creative Project</h3>
+            <p>
+              A project focused on creativity, design, and new ideas.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=900&q=80"
+            alt="Design project">
+
+          <div class="project-info">
+            <h3>Design Project</h3>
+            <p>
+              Exploring modern design concepts and digital experiences.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+            alt="Technology project">
+
+          <div class="project-info">
+            <h3>Web Project</h3>
+            <p>
+              A responsive website created to practice web development.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT
+  ========================== -->
+
+  <section class="contact" id="contact">
+
+    <div class="contact-container">
+
+      <h2>Let's Connect</h2>
+
+      <p>
+        Have a question, an opportunity, or simply want to say hello?
+        I'd love to hear from you.
+      </p>
+
+      <div class="contact-buttons">
+
+        <!-- CHANGE THIS EMAIL -->
+        <a
+          href="mailto:yourname@example.com"
+          class="btn">
+          ✉ Email Me
+        </a>
+
+        <!-- CHANGE THIS LINK -->
+        <a
+          href="https://www.linkedin.com/"
+          target="_blank"
+          class="btn">
+          LinkedIn
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="socials">
+
+      <a href="https://www.linkedin.com/" target="_blank">
+        in
+      </a>
+
+      <a href="https://github.com/" target="_blank">
+        GH
+      </a>
+
+      <a href="mailto:yourname@example.com">
+        ✉
+      </a>
+
+    </div>
+
+    <p>
+      © 2026 Denise. All rights reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+
+    // Close mobile menu when a link is clicked
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+
+    });
+
+
+    // Small scroll effect for the header
+
+    window.addEventListener("scroll", () => {
+
+      const header = document.querySelector("header");
+
+      if (window.scrollY > 50) {
+        header.style.boxShadow = "0 5px 25px rgba(0,0,0,.08)";
+      } else {
+        header.style.boxShadow = "none";
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>
+
+
